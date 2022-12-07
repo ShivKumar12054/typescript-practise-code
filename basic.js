@@ -87,14 +87,14 @@ called always number has to be put but this can be also made to accept two types
 /** Nested objects
  * we can also make a function accept a nested objects format simply by using type
  */
-var song = {
-    songName: "abcdef",
-    artists: "nana mikoski",
-    credits: {
-        producer: "alen skyan",
-        writer: "miyo karima"
-    }
-};
+// const song = {
+//   songName: "abcdef",
+//   artists: "nana mikoski",
+//   credits: {
+//     producer: "alen skyan",
+//     writer: "miyo karima",
+//   },
+// };
 // if a function accepts a certain object with type we can do as
 // function mySongs(mySongs: {
 //   songName: string;
@@ -170,18 +170,61 @@ var song = {
  *
  */
 // here age can only accept either number of string
-var age = "26";
-age = 22;
+// var ageOfMe = "26";
+// ageOfMe = 27;
 // union types in arrays
 // to have either array of string or number we use this
-var numStrArr = [];
+// var numStrArr123 = [];
 //to make array accepts string and number inside it we can use
-var numStrArr2 = [];
-numStrArr2 = ["shiva", 33, "sam", 1234];
-var lion = {
-    name: "Lion",
-    species: "mammals",
-    diet: "carnivoros",
-    eats: function () { return "eats deer and other animal"; }
-};
-console.log(lion.eats);
+// var numStrArr = [];
+// numStrArr = ["shiva", 33, "sam", 1234];
+// var lion = {
+//     name: "Lion",
+//     species: "mammals",
+//     diet: "carnivoros",
+//     eats: function () {
+//         return "eats deer and other animal";
+//     }
+// };
+// now the object mano will have all four properties in it
+// var mano = {
+//     name: "Mano jujustki",
+//     breed: "jerman sherpherd",
+//     bloodLine: "royal",
+//     bark: function () { return 'hola doggy!!!!!'; }
+// };
+/**   Interface                       vs                        type
+ *  Syntax:
+ *      interface Name {                                      type Name = {
+ *                                                                              }
+ *                }
+ * 1. they can only describe                              1.can be for variables and objects and string literals - it can describe any type
+ *     the shapes of an objects.
+ *      eg: type colour =  "red" | "blue"
+ *           not possible in interface
+ *
+ * 2. reopen is possible                                    2. Not possible
+ *
+ *    interface Animal {
+ *          name: string,
+ *          species: string
+ *         }
+ *
+ *    interface Animal {
+ *          lifeSpan: number,
+ *          diet: string
+ *        }
+ *
+ *    -> it is possible
+ *
+ * 3. a class can inherit mulitple interface's              3. not possible
+*/
+/** Tuples and Enums
+ * - tuples area special type exclusive to Typescript
+ * - Tuples are array of fixes lengths and ordered with specific types - like super rigid array
+ * - tuples are fixed and types are specified also the order how it is declared
+*/
+// var myTuple = [11, "sjbf", true];
+// console.log(myTuple);
+// myTuple.push(232323);
+// console.log(myTuple);

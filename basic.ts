@@ -121,14 +121,14 @@ called always number has to be put but this can be also made to accept two types
  * we can also make a function accept a nested objects format simply by using type
  */
 
-const song = {
-  songName: "abcdef",
-  artists: "nana mikoski",
-  credits: {
-    producer: "alen skyan",
-    writer: "miyo karima",
-  },
-};
+// const song = {
+//   songName: "abcdef",
+//   artists: "nana mikoski",
+//   credits: {
+//     producer: "alen skyan",
+//     writer: "miyo karima",
+//   },
+// };
 
 // if a function accepts a certain object with type we can do as
 
@@ -241,17 +241,17 @@ const song = {
  */
 
 // here age can only accept either number of string
-let age: string | number = "26"
-age = 22
+let ageOfMe: string | number = "26"
+ageOfMe = 27
 
 // union types in arrays
 
 // to have either array of string or number we use this
-let numStrArr: string[] | number[] = []
+let numStrArr123: string[] | number[] = []
 
 //to make array accepts string and number inside it we can use
-let numStrArr2: (string | number)[] = []
-numStrArr2 = ["shiva", 33, "sam", 1234]
+let numStrArr: (string | number)[] = []
+numStrArr = ["shiva", 33, "sam", 1234]
 
 
 
@@ -275,20 +275,20 @@ numStrArr2 = ["shiva", 33, "sam", 1234]
  * }
  */
 
-// interface Animal {
-//   name: string,
-//   species: string,
-//   diet: string,
-//   eats: () => string
-// }
+interface Animal {
+  name: string,
+  species: string,
+  diet: string,
+  eats: () => string
+}
 
-// const lion: Animal = {
-//   name: "Lion",
-//   species: "mammals",
-//   diet: "carnivoros",
-//   eats: () => {
-//               return "eats deer and other animal"
-//             }}
+const lion: Animal = {
+  name: "Lion",
+  species: "mammals",
+  diet: "carnivoros",
+  eats: () => {
+              return "eats deer and other animal"
+            }}
 
 // console.log(lion.eats);
 
@@ -345,3 +345,64 @@ const mano: Dog = {
 
 
 
+/** Tuples and Enums
+ * - tuples area special type exclusive to Typescript
+ * - Tuples are array of fixes lengths and ordered with specific types - like super rigid array
+ * - tuples are fixed and types are specified also the order how it is declared
+ * - main disadvantage is when we use myTuple.push(anyvalue) it will get inserted regardless of the type typle type safe
+*/
+
+let myTuple: [number, string, boolean] = [11, "sjbf", true];
+
+
+console.log(myTuple);
+
+myTuple.push(232323)
+console.log(myTuple);
+
+
+/** Enum -
+ * - enums allow us to define a set of names constants. we can give these constants numeric or string values
+ * -
+ * Yet to learn -
+ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+/** CLASSES */
+
+// class Car {
+//   name: string
+//   branch: string
+//   constructor(name: string, branch: string) {
+//     this.name = name;
+//     this.branch = branch;
+//   }
+// }
+
+//instead of th eabove code we can also use shorthand property as - here we can remove the extra code that is as above this is called Parameter Properties Shorthand
+
+// class Bike {
+//   constructor(public name: string, public brand: string) {
+//     this.name = name;
+//     this.brand = brand;
+//   }
+// }
+
+
+
+
+
+/** GENERICS -
+ *
+ */
